@@ -12,7 +12,11 @@ namespace Patt3_v2
             // главное приложение
             MainApp app = new MainApp();
 
-            
+            /*
+             * Прокси, Делегирование
+             */
+                
+            /*
             // освещение
             Lighting lamp = new Chandelier("Lamp1");
             Lighting lamp2 = new XiaomiLamp("Lamp2");
@@ -51,6 +55,41 @@ namespace Patt3_v2
             app.PowerSwitch(proxyXiaomiKettle, false);
             app.SetTemperature(proxyXiaomiKettle, TempValue - 4);
             app.SetTemperature(proxyNoSmartKettle, TempValue - 4);
+            */
+
+
+            /*
+             * Адаптер
+             */
+            /*
+            // создаем оригинальный чайник
+            Kettle xiaomiKettle = new XiaomiKettle("XiaomiKettle");
+            app.AddKettle(xiaomiKettle);
+
+            // создаем похожее на чайник ()
+            WaterHeater waterHeater = new WaterHeater();
+            Kettle nowKettle = new WaterHeaterToKettleAdapter("nowKettle", waterHeater);
+            app.AddKettle(nowKettle);
+
+            // проверка данных
+            Console.WriteLine(nowKettle.GetTemperature());
+            Console.WriteLine(nowKettle.GetPower());
+
+            // тест работы
+            app.PowerSwitchKettles(true);
+            app.SetTemperature(TempValue);
+
+            // проверка данных
+            Console.WriteLine(nowKettle.GetTemperature());
+            Console.WriteLine(nowKettle.GetPower());
+            */
+
+
+            /*
+             * 
+             */
+
+
 
 
             Console.WriteLine("Press any key to continue...");

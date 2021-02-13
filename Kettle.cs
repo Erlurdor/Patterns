@@ -32,6 +32,7 @@ namespace Patt3_v2
         abstract public string SetTemperature(int value);
 
         abstract public bool GetPower();
+
         abstract public int GetTemperature();
     }
 

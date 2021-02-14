@@ -119,6 +119,23 @@ namespace Patt3_v2
 
 
 
+            /*
+             * Фасад
+             */
+            /*
+            Kettle kettle = new XiaomiKettle("Xiaomi Kettle");
+            Lighting lamp = new XiaomiLamp("Xiaomi Lamp");
+            Organizer organizer = new XiaomiOrganizer("Xiaomi Organizer");
+            RemoteController remoteController = new RemoteController("RC for Xiaomi TV", new XiaomiTV("XiaomiTV"));
+
+            WelcomeHomeFacade welcomeHomeFacade = new WelcomeHomeFacade("WelcomeHomeFacade", kettle, lamp, organizer, remoteController);
+
+            welcomeHomeFacade.GotHome();
+            welcomeHomeFacade.LeftHome();
+            */
+
+
+
 
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey(true);

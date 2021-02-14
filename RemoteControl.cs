@@ -6,7 +6,7 @@ namespace Patt3_v2
 {
     abstract class RemoteControl : Device
     {
-        TV tv;
+        private TV tv;
 
         public RemoteControl(string name, TV tv) : base(name)
         {

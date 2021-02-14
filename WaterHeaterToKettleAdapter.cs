@@ -6,7 +6,7 @@ namespace Patt3_v2
 {
     class WaterHeaterToKettleAdapter : Kettle
     {
-        WaterHeater waterHeater;
+        private WaterHeater waterHeater;
 
         public WaterHeaterToKettleAdapter(string name, WaterHeater waterHeater) : base(name)
         {

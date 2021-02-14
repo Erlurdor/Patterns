@@ -33,7 +33,7 @@ namespace Patt3_v2
 
         public override void Off()
         {
-            Console.WriteLine("Power of...");
+            Console.WriteLine("Power off...");
         }
 
         public override void On()
@@ -63,7 +63,7 @@ namespace Patt3_v2
 
         public override void Off()
         {
-            Console.WriteLine("Power of...");
+            Console.WriteLine("Power off...");
         }
 
         public override void On()

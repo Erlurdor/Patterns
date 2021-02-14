@@ -4,7 +4,6 @@ using System.Text;
 
 namespace Patt3_v2
 {
-    // чайник
     abstract class Kettle : Device
     {
         protected PowerBehavior powerBehavior;
@@ -35,8 +34,8 @@ namespace Patt3_v2
 
         abstract public int GetTemperature();
     }
+        
 
-    // обычный чайник
     class NoSmartKettle : Kettle
     {
         public NoSmartKettle(string name) : base(name)
@@ -66,7 +65,6 @@ namespace Patt3_v2
         }
     }
 
-    // умный чайник
     class XiaomiKettle : Kettle
     {
         public XiaomiKettle(string name) : base(name)

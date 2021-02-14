@@ -45,7 +45,6 @@ namespace Patt3_v2
 
         public int GetBrightness()
         {
-            //return BrightnessBehavior.maxLight;
             return -1;
         }
     }

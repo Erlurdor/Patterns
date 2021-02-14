@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Patt3_v2
-{
-    // освещение
+{    
     abstract class Lighting : Device
     {
         private PowerBehavior powerBehavior;
@@ -36,18 +35,16 @@ namespace Patt3_v2
         }
     }
 
-    // люстра
+    
     class Chandelier : Lighting
     {
         public Chandelier(string name) : base(name)
-        {
-            
+        {            
             SetPowerBehavior(new DefaultLightingPowerBehavior());
             SetBrightnessBehavior(new NoChangedBrightnessBehavior());
         }
     }
 
-    // умная лампа
     class XiaomiLamp : Lighting
     {
         public XiaomiLamp(string name) : base(name)

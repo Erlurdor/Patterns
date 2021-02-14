@@ -2,7 +2,6 @@
 
 namespace Patt3_v2
 {    
-    // Прокси для обычного чайника
     class ProxyKettle : Kettle
     {
         private Kettle kettle;
@@ -23,8 +22,7 @@ namespace Patt3_v2
 
 
         public override string SetTemperature(int value)
-        {
-            //Console.Write(DateTime.Now + "\t");
+        {            
             Log();
             Console.WriteLine("Temperature setting on value " + value + "...");
             Console.WriteLine(kettle.SetTemperature(value));

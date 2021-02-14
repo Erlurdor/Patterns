@@ -15,7 +15,6 @@ namespace Patt3_v2
             /*
              * Прокси, Делегирование
              */
-                
             /*
             // освещение
             Lighting lamp = new Chandelier("Lamp1");
@@ -86,8 +85,37 @@ namespace Patt3_v2
 
 
             /*
-             * 
+             * Декоратор
              */
+            /*
+            Organizer organizer = new XiaomiOrganizer("Default organizer");
+            MorningOrganizer morningOrganizer = new MorningOrganizer("Morning", organizer);
+            EveningOrganizer eveningOrganizer = new EveningOrganizer("Evening", morningOrganizer);
+
+            Console.WriteLine(morningOrganizer.getMessage());
+            Console.WriteLine(eveningOrganizer.getMessage());
+            */
+
+
+            /*
+             * Мост
+             */
+            /*
+            RemoteController remoteController1 = new RemoteController("RC for XiaomiTV", new XiaomiTV("XiaomiTV"));
+            RemoteController remoteController2 = new RemoteController("RC for SonyTV", new SonyTV("SonyTV"));
+
+            remoteController1.Info();
+            remoteController2.Info();
+
+            remoteController1.NextChannel();
+            remoteController1.NextChannel();
+            remoteController1.NextChannel();
+
+            remoteController2.NextChannel();
+            remoteController2.NextChannel();
+            remoteController2.PreviousChannel();
+            remoteController2.NextChannel();
+            */
 
 
 

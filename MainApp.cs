@@ -6,7 +6,23 @@ namespace Patt3_v2
 {
     class MainApp
     {
+        private static MainApp mainApp;
+
         private int IDCounter = 0;
+
+        private MainApp()
+        {
+        }
+
+        public static MainApp GetMainApp()
+        {
+            if (mainApp == null)
+            {
+                mainApp = new MainApp();
+            }
+            return mainApp;
+        }
+
 
         // освещение
         private List<Lighting> Lightings = new List<Lighting>();

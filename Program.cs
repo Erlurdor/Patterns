@@ -7,10 +7,11 @@ namespace Patt3_v2
         static void Main(string[] args)
         {
             const int TempValue = 100;
-            
+
 
             // главное приложение
-            MainApp app = new MainApp();
+            MainApp app = MainApp.GetMainApp();
+
 
             /*
              * Прокси, Делегирование
@@ -136,6 +137,18 @@ namespace Patt3_v2
 
 
 
+            /*
+             * Одиночка
+             */
+            /*
+            MainApp app2 = MainApp.GetMainApp();  
+            Console.WriteLine(ReferenceEquals(app, app2));
+            */
+
+
+            /*
+             * 
+             */
 
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey(true);

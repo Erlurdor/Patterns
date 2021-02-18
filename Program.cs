@@ -147,8 +147,28 @@ namespace Patt3_v2
 
 
             /*
-             * 
+             * Простая фабрика
              */
+            /*
+            KettleSimpleFactory kettleSimpleFactory = new KettleSimpleFactory("KettleSimpleFactory");
+            Kettle kettle1 = kettleSimpleFactory.createKettle("installable", "kettle1");
+            Console.WriteLine(kettle1.GetName());
+            Console.WriteLine(kettle1.GetType());
+            Console.WriteLine("\n\n");
+
+            Kettle kettle2 = kettleSimpleFactory.createKettle("noinstallable", "kettle2");
+            Console.WriteLine(kettle2.GetName());
+            Console.WriteLine(kettle2.GetType());
+            Console.WriteLine("\n\n");
+
+            Kettle kettle3 = kettleSimpleFactory.createKettle("111installable", "kettle3");
+            Console.WriteLine(kettle3.GetName());
+            Console.WriteLine(kettle3.GetType());
+            Console.WriteLine("\n\n");
+            */
+
+
+
 
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey(true);

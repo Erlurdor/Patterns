@@ -129,7 +129,7 @@ namespace Patt3_v2
             Organizer organizer = new XiaomiOrganizer("Xiaomi Organizer");
             RemoteController remoteController = new RemoteController("RC for Xiaomi TV", new XiaomiTV("XiaomiTV"));
 
-            WelcomeHomeFacade welcomeHomeFacade = new WelcomeHomeFacade("WelcomeHomeFacade", kettle, lamp, organizer, remoteController);
+            WelcomeHomeFacade welcomeHomeFacade = new WelcomeHomeFacade(kettle, lamp, organizer, remoteController);
 
             welcomeHomeFacade.GotHome();
             welcomeHomeFacade.LeftHome();
@@ -150,7 +150,7 @@ namespace Patt3_v2
              * Простая фабрика
              */
             /*
-            KettleSimpleFactory kettleSimpleFactory = new KettleSimpleFactory("KettleSimpleFactory");
+            KettleSimpleFactory kettleSimpleFactory = new KettleSimpleFactory();
             Kettle kettle1 = kettleSimpleFactory.createKettle("installable", "kettle1");
             Console.WriteLine(kettle1.GetName());
             Console.WriteLine(kettle1.GetType());
@@ -166,6 +166,45 @@ namespace Patt3_v2
             Console.WriteLine(kettle3.GetType());
             Console.WriteLine("\n\n");
             */
+
+
+
+            /*
+             * Абстрактная Фабрика
+             */
+            /*
+            DeviceAbstractFactory deviceAbstractFactory = new XiaomiDeviceAbstractFactory();
+            Kettle kettle1 = deviceAbstractFactory.createKettle("Kettle1");
+            Lighting lighting1 = deviceAbstractFactory.createLighting("Lamp1");
+
+            //app.AddKettle(kettle1);
+            //app.AddLight(lighting1);
+
+            Console.WriteLine(kettle1.GetName());
+            Console.WriteLine(kettle1.GetType());
+
+            Console.WriteLine(lighting1.GetName());
+            Console.WriteLine(lighting1.GetType());
+
+            //app.PowerSwitch(kettle1, false);
+            //app.ChangeBrightness(lighting1, 100);
+
+
+            Console.WriteLine("\n\n");
+            DeviceAbstractFactory deviceAbstractFactory2 = new NoSmartDeviceAbstractFactory();
+            Kettle kettle2 = deviceAbstractFactory2.createKettle("Kettle2");
+            Lighting lighting2 = deviceAbstractFactory2.createLighting("Lamp2");
+
+            //app.AddKettle(kettle1);
+            //app.AddLight(lighting1);
+
+            Console.WriteLine(kettle2.GetName());
+            Console.WriteLine(kettle2.GetType());
+
+            Console.WriteLine(lighting2.GetName());
+            Console.WriteLine(lighting2.GetType());
+            */
+
 
 
 

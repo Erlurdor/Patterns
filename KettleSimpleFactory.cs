@@ -4,12 +4,8 @@ using System.Text;
 
 namespace Patt3_v2
 {
-    class KettleSimpleFactory : Device
+    class KettleSimpleFactory
     {
-        public KettleSimpleFactory(string name) : base(name)
-        {
-        }
-
         public Kettle createKettle(string typeTemperature, string name)
         {
             if (typeTemperature == "installable")

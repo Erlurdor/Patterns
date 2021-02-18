@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Patt3_v2
 {
-    class WelcomeHomeFacade : Device
+    class WelcomeHomeFacade
     {
         private Kettle kettle;
         private Lighting lighting;
@@ -15,7 +15,7 @@ namespace Patt3_v2
         private int brightnessLighting;
         private int channelRemoteController;
 
-        public WelcomeHomeFacade(string name, Kettle kettle, Lighting lighting, Organizer organizer, RemoteController remoteController) : base(name)
+        public WelcomeHomeFacade(Kettle kettle, Lighting lighting, Organizer organizer, RemoteController remoteController)
         {
             this.kettle = kettle;
             this.lighting = lighting;

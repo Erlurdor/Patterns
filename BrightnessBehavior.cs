@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Patt3_v2
 {
-    interface BrightnessBehavior
+    abstract class BrightnessBehavior
     {
-        public void ChangeBrightness(int value);
-        public int GetBrightness();
+        public abstract void ChangeBrightness(int value);
+        public abstract int GetBrightness();
         public const int maxLight = 100;
         public const int minLight = 0;
     }
@@ -16,7 +16,7 @@ namespace Patt3_v2
     {
         int brightness = BrightnessBehavior.maxLight;
 
-        public void ChangeBrightness(int value)
+        public override void ChangeBrightness(int value)
         {
             if (value > BrightnessBehavior.maxLight || value < BrightnessBehavior.minLight)
             {
@@ -31,19 +31,19 @@ namespace Patt3_v2
             }
         }
 
-        public int GetBrightness()
+        public override int GetBrightness()
         {
             return brightness;
         }
     }
     class NoChangedBrightnessBehavior : BrightnessBehavior
     {
-        public void ChangeBrightness(int value)
+        public override void ChangeBrightness(int value)
         {
             Console.WriteLine("Brightness cannot be changed!\n");
         }
 
-        public int GetBrightness()
+        public override int GetBrightness()
         {
             return -1;
         }

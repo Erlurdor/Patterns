@@ -4,20 +4,20 @@ using System.Text;
 
 namespace Patt3_v2
 {
-    interface DeviceAbstractFactory
+    abstract class DeviceAbstractFactory
     {
-        public Kettle createKettle(string name);
-        public Lighting createLighting(string name);
+        public abstract Kettle createKettle(string name);
+        public abstract Lighting createLighting(string name);
     }
 
     class XiaomiDeviceAbstractFactory : DeviceAbstractFactory
     {
-        public Kettle createKettle(string name)
+        public override Kettle createKettle(string name)
         {
             return new XiaomiKettle($"{name} - Xiaomi Kettle");
         }
 
-        public Lighting createLighting(string name)
+        public override Lighting createLighting(string name)
         {
             return new XiaomiLamp($"{name} - Xiaomi Lamp");
         }
@@ -25,12 +25,12 @@ namespace Patt3_v2
 
     class NoSmartDeviceAbstractFactory : DeviceAbstractFactory
     {
-        public Kettle createKettle(string name)
+        public override Kettle createKettle(string name)
         {
             return new NoSmartKettle($"{name} - No Smart Kettle");
         }
 
-        public Lighting createLighting(string name)
+        public override Lighting createLighting(string name)
         {
             return new Chandelier($"{name} - Chandelier");
         }

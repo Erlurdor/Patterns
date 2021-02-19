@@ -4,25 +4,25 @@ using System.Text;
 
 namespace Patt3_v2
 {
-    interface TemperatureBehavior
+    abstract class TemperatureBehavior
     {
         public const int maxTemperature = 100;
         public const int minTemperature = 0;
 
-        public string SetTemperature(int value);
-        public int GetTemperature();
+        public abstract string SetTemperature(int value);
+        public abstract int GetTemperature();
     }
 
     class InstallableTemperatureBehavior : TemperatureBehavior
     {
         int temperature = TemperatureBehavior.maxTemperature;
 
-        public int GetTemperature()
+        public override int GetTemperature()
         {
             return temperature;
         }
 
-        public string SetTemperature(int value)
+        public override string SetTemperature(int value)
         {
             if (value <= TemperatureBehavior.maxTemperature && value >= TemperatureBehavior.minTemperature)
             {
@@ -38,12 +38,12 @@ namespace Patt3_v2
 
     class NoInstallableTemperatureBehavior : TemperatureBehavior
     {
-        public int GetTemperature()
+        public override int GetTemperature()
         {            
             return -1;
         }
 
-        public string SetTemperature(int value)
+        public override string SetTemperature(int value)
         {
             return "Temperature cannot be set!";
         }

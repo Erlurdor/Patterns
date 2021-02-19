@@ -10,8 +10,11 @@ namespace Patt3_v2
 
         private int IDCounter = 0;
 
+        public EventManager eventManager;
+
         private MainApp()
         {
+            eventManager = new EventManager();
         }
 
         public static MainApp GetMainApp()
@@ -31,6 +34,8 @@ namespace Patt3_v2
         {
             Lighting.SetID(IDCounter++);
             Lightings.Add(Lighting);
+
+            eventManager.Notify(Lighting);
         }
 
         public void PowerSwitchLightings(bool value)
@@ -67,6 +72,8 @@ namespace Patt3_v2
         {
             kettle.SetID(IDCounter++);
             Kettles.Add(kettle);
+
+            eventManager.Notify(kettle);
         }
 
         public void PowerSwitchKettles(bool value)

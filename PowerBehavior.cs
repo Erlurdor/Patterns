@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Patt3_v2
 {
-    interface PowerBehavior
+    abstract class PowerBehavior
     {
-        public string PowerSwitch(bool value);
-        public bool GetPower();
+        public abstract string PowerSwitch(bool value);
+        public abstract bool GetPower();
     }
 
 
@@ -15,12 +15,12 @@ namespace Patt3_v2
     {
         bool isEnable = false;
 
-        public bool GetPower()
+        public override bool GetPower()
         {
             return isEnable;
         }
 
-        public string PowerSwitch(bool value)
+        public override string PowerSwitch(bool value)
         {
             isEnable = value;
             return "Succesfully";
@@ -31,12 +31,12 @@ namespace Patt3_v2
     {
         bool isEnable = false;
 
-        public bool GetPower()
+        public override bool GetPower()
         {
             return isEnable;
         }
 
-        public string PowerSwitch(bool value)
+        public override string PowerSwitch(bool value)
         {
             isEnable = value;
             return "Succesfully";

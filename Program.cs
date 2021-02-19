@@ -206,6 +206,26 @@ namespace Patt3_v2
             */
 
 
+            /*
+             * Наблюдатель
+             */
+            /*
+            EventListener logging = new LoggingEventListener();
+            EventListener dating = new DataLoggingEventListener();
+
+            app.eventManager.Subscribe(logging);
+            app.eventManager.Subscribe(dating);
+
+
+            Kettle kettle1 = new XiaomiKettle("kettle1");
+            Lighting lighting1 = new XiaomiLamp("lighting1");
+
+            app.AddKettle(kettle1);
+
+            app.eventManager.Unsubscribe(dating);
+            app.AddLight(lighting1);
+            */
+
 
 
 

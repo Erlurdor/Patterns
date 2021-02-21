@@ -227,7 +227,36 @@ namespace Patt3_v2
             */
 
 
+            /*
+             * Состояние
+             */
+            Microwave microwave = new DefaultMicrowave("Microwave");
 
+            Console.WriteLine("Microwave options:\n");
+            Console.WriteLine("1 - On");
+            Console.WriteLine("2 - Off");
+            Console.WriteLine("3 - Reheat food onf 5 sec\n");
+
+            ConsoleKey key;
+            do
+            {
+                key = Console.ReadKey(true).Key;
+                switch (key)
+                {
+                    case ConsoleKey.D1:
+                        microwave.On();
+                        break;
+
+                    case ConsoleKey.D2:
+                        microwave.Off();
+                        break;
+
+                    case ConsoleKey.D3:
+                        microwave.ReheatFood(5);
+                        break;
+                }
+            }
+            while (key != ConsoleKey.Escape);
 
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey(true);
